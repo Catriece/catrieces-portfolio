@@ -2,7 +2,14 @@ import React from "react";
 
 const Languages = () => {
   return (
-    <div style={{ marginTop: "40px" }}>
+    <div
+      style={{
+        margin: "30px",
+        maxWidth: "380px",
+        textAlign: "center",
+        padding: "20px",
+      }}
+    >
       <div>
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
@@ -63,8 +70,6 @@ const Languages = () => {
             borderRadius: "8px",
           }}
         />
-      </div>
-      <div>
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
           style={{

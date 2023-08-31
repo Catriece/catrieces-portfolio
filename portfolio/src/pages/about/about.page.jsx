@@ -9,6 +9,9 @@ const AboutMe = () => {
       <Grid item xs={12} className="heading">
         <div className="heading">{<Header />}</div>
       </Grid>
+      <Grid item xs={12} md={6} alignContent="center" justifyContent="center">
+        <img src={img} alt="catriece" style={{ height: "600px" }} />
+      </Grid>
       <Grid item xs={12} md={5} justifyContent="center" alignItems="center">
         <Paper elevation={3} style={{ padding: "16px", justifyContent: "" }}>
           <h3>Hey you!</h3>
@@ -52,9 +55,6 @@ const AboutMe = () => {
           </p>
           <p>Cheers to pixels, passion, and a limitless digital world!</p>
         </Paper>
-      </Grid>
-      <Grid item xs={12} md={5}>
-        <img src={img} alt="catriece" style={{ height: "600px" }} />
       </Grid>
       <Grid item xs={12}>
         <div className="footer">Contact</div>
