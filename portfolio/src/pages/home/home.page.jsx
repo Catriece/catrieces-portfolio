@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import Header from "../../components/header";
 import Languages from "../../components/languages";
 import { useNavigate } from "react-router-dom";
 import { Grid, Paper } from "@mui/material";
 import img from "../../assets/images/background.png";
+// import useStyles from "./styles.homepage";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -34,8 +34,25 @@ const HomePage = () => {
           paddingBottom: 5,
           paddingLeft: 4,
           borderRadius: 4,
-          maxWidth: 970,
           boxShadow: "0px 4px 100px #ffde59",
+          "@media (max-width: 600px)": {
+            minWidth: "320px",
+            maxWidth: "500px",
+          },
+          "@media (min-width: 600px)": {
+            minWidth: "500px",
+            maxWidth: "750px",
+          },
+          "@media (min-width: 960px)": {
+            minWidth: "800px",
+            maxWidth: "100px",
+          },
+          "@media (min-width: 1280px)": {
+            width: "1000px",
+          },
+          "@media (min-width: 1580px)": {
+            minWidth: "1300px",
+          },
         }}
       >
         <Grid
@@ -45,36 +62,97 @@ const HomePage = () => {
           alignItems="center"
           className="body"
         >
-          <Grid item xs={12} sm={7}>
+          <Grid item xs={12} md={7}>
             <Grid
               item
-              textAlign="right"
               sx={{
                 marginBottom: "0",
+                fontSize: "60px",
                 fontWeight: "700",
+                paddingTop: "0",
+                "@media (max-width: 500px)": {
+                  fontSize: "20px",
+                  textAlign: "center",
+                },
+                "@media (min-width: 500px)": {
+                  fontSize: "20px",
+                  textAlign: "center",
+                },
+                "@media (min-width: 600px)": {
+                  fontSize: "20px",
+                },
+                "@media (min-width: 960px)": {
+                  fontSize: "23px",
+                  textAlign: "right",
+                },
+                "@media (min-width: 1280px)": {
+                  fontSize: "24px",
+                  textAlign: "right",
+                },
+                "@media (min-width: 1580px)": {
+                  fontSize: "35px",
+                  textAlign: "right",
+                },
+                "@media (min-width: 1900px)": {
+                  fontSize: "41px",
+                  textAlign: "right",
+                  marginLeft: "12px",
+                },
+              }}
+            >
+              <h1
+                style={{
+                  marginRight: "10px",
+                  marginBottom: "0px",
+                  marginTop: "auto",
+                }}
+              >
+                Front-end Software Developer
+              </h1>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                "@media (max-width: 500px)": {
+                  fontSize: "18px",
+                  textAlign: "center",
+                  marginTop: "10px",
+                },
+                "@media (min-width: 500px)": {
+                  fontSize: "22px",
+                  textAlign: "center",
+                  marginTop: "10px",
+                },
+                "@media (min-width: 600px)": {
+                  fontSize: "20px",
+                  textAlign: "center",
+                  marginTop: "10px",
+                },
+                "@media (min-width: 960px)": {
+                  fontSize: "23px",
+                  textAlign: "right",
+                  marginRight: "55px",
+                },
+                "@media (min-width: 1280px)": {
+                  fontSize: "30px",
+                  textAlign: "right",
+                  marginRight: "55px",
+                },
+                "@media (min-width: 1580px)": {
+                  fontSize: "35px",
+                  textAlign: "right",
+                  marginRight: "55px",
+                },
+                "@media (min-width: 1900px)": {
+                  fontSize: "45px",
+                  textAlign: "right",
+                  marginRight: "55px",
+                },
               }}
             >
               <p
                 style={{
-                  marginRight: "10px",
-                  marginBottom: "0px",
-                  marginTop: "0px",
-                  fontSize: "60px",
-                  paddingTop: "0",
-                }}
-              >
-                Front-end Software Developer
-              </p>
-            </Grid>
-            <Grid>
-              <p
-                style={{
-                  margin: "auto",
-                  marginTop: "0px",
-                  marginRight: "55px",
-                  marginBottom: "30px",
-                  textAlign: "right",
-                  fontSize: "27px",
+                  marginBottom: "20px",
                 }}
               >
                 <i>Coding your ideas into reality!</i>
@@ -93,14 +171,40 @@ const HomePage = () => {
                   sx={{
                     paddingTop: 1,
                     paddingBottom: 1,
-                    width: 100,
                     borderRadius: 15,
-                    fontSize: 10,
                     margin: 1,
                     borderColor: "#000000",
                     color: "#000000",
                     "&:hover": {
                       backgroundColor: "#ffde59",
+                    },
+                    "@media (max-width: 500px)": {
+                      width: 85,
+                      fontSize: 9,
+                    },
+                    "@media (min-width: 500px)": {
+                      width: 90,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 600px)": {
+                      width: 95,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 960px)": {
+                      width: 100,
+                      fontSize: 11,
+                    },
+                    "@media (min-width: 1280px)": {
+                      width: 100,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 1580px)": {
+                      width: 100,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 1900px)": {
+                      width: 150,
+                      fontSize: 15,
                     },
                   }}
                   onClick={handleProjectsButton}
@@ -121,6 +225,34 @@ const HomePage = () => {
                     color: "#000000",
                     "&:hover": {
                       backgroundColor: "#ffde59",
+                    },
+                    "@media (max-width: 500px)": {
+                      width: 85,
+                      fontSize: 9,
+                    },
+                    "@media (min-width: 500px)": {
+                      width: 90,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 600px)": {
+                      width: 95,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 960px)": {
+                      width: 100,
+                      fontSize: 11,
+                    },
+                    "@media (min-width: 1280px)": {
+                      width: 100,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 1580px)": {
+                      width: 100,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 1900px)": {
+                      width: 150,
+                      fontSize: 15,
                     },
                   }}
                   onClick={handleAboutMeButton}
@@ -143,6 +275,34 @@ const HomePage = () => {
                     "&:hover": {
                       backgroundColor: "#ffde59",
                     },
+                    "@media (max-width: 500px)": {
+                      width: 85,
+                      fontSize: 9,
+                    },
+                    "@media (min-width: 500px)": {
+                      width: 90,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 600px)": {
+                      width: 95,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 960px)": {
+                      width: 100,
+                      fontSize: 11,
+                    },
+                    "@media (min-width: 1280px)": {
+                      width: 100,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 1580px)": {
+                      width: 100,
+                      fontSize: 10,
+                    },
+                    "@media (min-width: 1900px)": {
+                      width: 150,
+                      fontSize: 15,
+                    },
                   }}
                 >
                   {" "}
@@ -152,7 +312,7 @@ const HomePage = () => {
               <Grid
                 container
                 justifyContent="center"
-                style={{
+                xs={{
                   margin: "auto",
                   alignItems: "center",
                 }}
@@ -162,7 +322,7 @@ const HomePage = () => {
             </Grid>
           </Grid>
 
-          <Grid item xs={12} sm={5} textAlign="center">
+          <Grid item xs={12} md={5} textAlign="center">
             <img
               src={img}
               alt="catriece memoji"
