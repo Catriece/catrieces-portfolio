@@ -4,10 +4,9 @@ const Languages = () => {
   return (
     <div
       style={{
-        margin: "30px",
         maxWidth: "380px",
         textAlign: "center",
-        padding: "20px",
+        padding: "20px 0",
       }}
     >
       <div>

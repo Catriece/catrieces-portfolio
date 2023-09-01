@@ -33,13 +33,23 @@ export default function NavMenu() {
   return (
     <Container
       maxWidth="sm"
-      sx={{ textAlign: "right", marginRight: 0, marginTop: 5 }}
+      justifyContent="flex-start"
+      sx={{
+        textAlign: "left",
+        margin: 0,
+        paddingTop: 0,
+      }}
     >
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
+        sx={{
+          justifyContent: "flex-start",
+          paddingLeft: "0",
+          color: "#000000",
+        }}
         onClick={handleClick}
       >
         {<MenuRoundedIcon />}
