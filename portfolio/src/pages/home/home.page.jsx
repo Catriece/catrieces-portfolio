@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import Languages from "../../components/languages";
 import { useNavigate } from "react-router-dom";
 import { Grid, Paper } from "@mui/material";
+import MyButton from "../../components/button";
 import img from "../../assets/images/background.png";
 // import useStyles from "./styles.homepage";
 
@@ -26,6 +27,7 @@ const HomePage = () => {
       style={{ minHeight: "100vh" }}
     >
       <Paper
+        id="box"
         elevation={10}
         sx={{
           margin: 5,
@@ -35,24 +37,6 @@ const HomePage = () => {
           paddingLeft: 4,
           borderRadius: 4,
           boxShadow: "0px 4px 100px #ffde59",
-          "@media (max-width: 600px)": {
-            minWidth: "320px",
-            maxWidth: "500px",
-          },
-          "@media (min-width: 600px)": {
-            minWidth: "500px",
-            maxWidth: "750px",
-          },
-          "@media (min-width: 960px)": {
-            minWidth: "800px",
-            maxWidth: "100px",
-          },
-          "@media (min-width: 1280px)": {
-            width: "1000px",
-          },
-          "@media (min-width: 1580px)": {
-            minWidth: "1300px",
-          },
         }}
       >
         <Grid
@@ -64,40 +48,13 @@ const HomePage = () => {
         >
           <Grid item xs={12} md={7}>
             <Grid
+              id="title"
               item
               sx={{
                 marginBottom: "0",
                 fontSize: "60px",
                 fontWeight: "700",
                 paddingTop: "0",
-                "@media (max-width: 500px)": {
-                  fontSize: "20px",
-                  textAlign: "center",
-                },
-                "@media (min-width: 500px)": {
-                  fontSize: "20px",
-                  textAlign: "center",
-                },
-                "@media (min-width: 600px)": {
-                  fontSize: "20px",
-                },
-                "@media (min-width: 960px)": {
-                  fontSize: "23px",
-                  textAlign: "right",
-                },
-                "@media (min-width: 1280px)": {
-                  fontSize: "24px",
-                  textAlign: "right",
-                },
-                "@media (min-width: 1580px)": {
-                  fontSize: "35px",
-                  textAlign: "right",
-                },
-                "@media (min-width: 1900px)": {
-                  fontSize: "41px",
-                  textAlign: "right",
-                  marginLeft: "12px",
-                },
               }}
             >
               <h1
@@ -110,46 +67,7 @@ const HomePage = () => {
                 Front-end Software Developer
               </h1>
             </Grid>
-            <Grid
-              item
-              sx={{
-                "@media (max-width: 500px)": {
-                  fontSize: "18px",
-                  textAlign: "center",
-                  marginTop: "10px",
-                },
-                "@media (min-width: 500px)": {
-                  fontSize: "22px",
-                  textAlign: "center",
-                  marginTop: "10px",
-                },
-                "@media (min-width: 600px)": {
-                  fontSize: "20px",
-                  textAlign: "center",
-                  marginTop: "10px",
-                },
-                "@media (min-width: 960px)": {
-                  fontSize: "23px",
-                  textAlign: "right",
-                  marginRight: "55px",
-                },
-                "@media (min-width: 1280px)": {
-                  fontSize: "30px",
-                  textAlign: "right",
-                  marginRight: "55px",
-                },
-                "@media (min-width: 1580px)": {
-                  fontSize: "35px",
-                  textAlign: "right",
-                  marginRight: "55px",
-                },
-                "@media (min-width: 1900px)": {
-                  fontSize: "45px",
-                  textAlign: "right",
-                  marginRight: "55px",
-                },
-              }}
-            >
+            <Grid id="slogan" item>
               <p
                 style={{
                   marginBottom: "20px",
@@ -166,148 +84,17 @@ const HomePage = () => {
                   margin: "auto",
                 }}
               >
-                <Button
-                  variant="outlined"
-                  sx={{
-                    paddingTop: 1,
-                    paddingBottom: 1,
-                    borderRadius: 15,
-                    margin: 1,
-                    borderColor: "#000000",
-                    color: "#000000",
-                    "&:hover": {
-                      backgroundColor: "#ffde59",
-                    },
-                    "@media (max-width: 500px)": {
-                      width: 85,
-                      fontSize: 9,
-                    },
-                    "@media (min-width: 500px)": {
-                      width: 90,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 600px)": {
-                      width: 95,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 960px)": {
-                      width: 100,
-                      fontSize: 11,
-                    },
-                    "@media (min-width: 1280px)": {
-                      width: 100,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 1580px)": {
-                      width: 100,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 1900px)": {
-                      width: 150,
-                      fontSize: 15,
-                    },
-                  }}
+                <MyButton
                   onClick={handleProjectsButton}
-                >
-                  {" "}
-                  Projects
-                </Button>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    paddingTop: 1,
-                    paddingBottom: 1,
-                    width: 100,
-                    borderRadius: 15,
-                    fontSize: 10,
-                    margin: 1,
-                    borderColor: "#000000",
-                    color: "#000000",
-                    "&:hover": {
-                      backgroundColor: "#ffde59",
-                    },
-                    "@media (max-width: 500px)": {
-                      width: 85,
-                      fontSize: 9,
-                    },
-                    "@media (min-width: 500px)": {
-                      width: 90,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 600px)": {
-                      width: 95,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 960px)": {
-                      width: 100,
-                      fontSize: 11,
-                    },
-                    "@media (min-width: 1280px)": {
-                      width: 100,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 1580px)": {
-                      width: 100,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 1900px)": {
-                      width: 150,
-                      fontSize: 15,
-                    },
-                  }}
-                  onClick={handleAboutMeButton}
-                >
-                  {" "}
-                  About Me
-                </Button>
+                  name={"Projects"}
+                ></MyButton>
 
-                <Button
-                  variant="outlined"
-                  sx={{
-                    paddingTop: 1,
-                    paddingBottom: 1,
-                    width: 100,
-                    borderRadius: 15,
-                    fontSize: 10,
-                    margin: 1,
-                    borderColor: "#000000",
-                    color: "#000000",
-                    "&:hover": {
-                      backgroundColor: "#ffde59",
-                    },
-                    "@media (max-width: 500px)": {
-                      width: 85,
-                      fontSize: 9,
-                    },
-                    "@media (min-width: 500px)": {
-                      width: 90,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 600px)": {
-                      width: 95,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 960px)": {
-                      width: 100,
-                      fontSize: 11,
-                    },
-                    "@media (min-width: 1280px)": {
-                      width: 100,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 1580px)": {
-                      width: 100,
-                      fontSize: 10,
-                    },
-                    "@media (min-width: 1900px)": {
-                      width: 150,
-                      fontSize: 15,
-                    },
-                  }}
-                >
-                  {" "}
-                  Contact
-                </Button>
+                <MyButton
+                  onClick={handleAboutMeButton}
+                  name={"About Me"}
+                ></MyButton>
+
+                <MyButton name={"Contact"}></MyButton>
               </Grid>
               <Grid
                 container

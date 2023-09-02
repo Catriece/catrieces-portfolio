@@ -36,3 +36,112 @@
     transform: rotate(360deg);
   }
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 600px) {
+  #box {
+    min-width: "320px";
+    max-width: "500px";
+  }
+
+  #title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #slogan {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #projectsBtn,
+  #aboutmeBtn,
+  #contactBtn {
+    width: 115px;
+    height: 33px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #box {
+    min-width: 500px;
+    max-width: 750px;
+  }
+
+  #title {
+    font-size: 20px;
+    text-align: right;
+  }
+
+  #slogan {
+    font-size: 23px;
+    text-align: right;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #box {
+    min-width: 800px;
+    max-width: 900px;
+  }
+
+  #title {
+    font-size: 23px;
+    text-align: right;
+  }
+
+  #slogan {
+    font-size: 25px;
+    text-align: right;
+    margin-right: 55px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #box {
+    min-width: 1000px;
+  }
+
+  #title {
+    font-size: 24px;
+    text-align: right;
+  }
+
+  #slogan {
+    font-size: 30px;
+    text-align: right;
+    margin-top: 55px;
+  }
+}
+
+@media screen and (min-width: 1580px) {
+  #box {
+    min-width: 1300px;
+  }
+
+  #title {
+    font-size: 35px;
+    text-align: right;
+  }
+  #slogan {
+    font-size: 35px;
+    text-align: right;
+    margin-top: 55px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  #title {
+    font-size: 41px;
+    text-align: right;
+    margin-left: 12px;
+  }
+  #slogan {
+    font-size: 45px;
+    text-align: right;
+    margin-top: 55px;
+  }
+}
