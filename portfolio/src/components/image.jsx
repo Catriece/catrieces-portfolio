@@ -1,3 +1,4 @@
+// IF IMAGES HOLD UP AFTER REDEPLOYMENT DELETE CODE IN DIV
 import React from "react";
 import { useTheme, createTheme } from "@mui/material/styles";
 
@@ -17,39 +18,40 @@ const Image = ({ src, alt }) => {
 
   const theme = useTheme(screens);
   return (
-    <div>
+    <div
+    //   style={{
+    //     [theme.breakpoints.down("sm")]: {
+    //       maxWidth: "300px",
+    //     },
+    //     [theme.breakpoints.up("sm")]: {
+    //       maxWidth: "300px",
+    //       maxHeight: "auto",
+    //     },
+    //     [theme.breakpoints.up("md")]: {
+    //       maxWidth: "300px",
+    //       maxHeight: "auto",
+    //     },
+    //     [theme.breakpoints.up("lg")]: {
+    //       maxWidth: "300px",
+    //       maxHeight: "auto",
+    //     },
+    //     [theme.breakpoints.up("xl")]: {
+    //       maxWidth: "300px",
+    //       maxHeight: "auto",
+    //     },
+    //     [theme.breakpoints.up("xxl")]: {
+    //       maxWidth: "300px",
+    //       maxHeight: "auto",
+    //     },
+    //   }}
+    >
       <img
         src={src}
         alt={alt}
         style={{
-          [theme.breakpoints.down("sm")]: {
-            width: 200,
-            height: 300,
-          },
-          [theme.breakpoints.up("sm")]: {
-            width: 90,
-            fontSize: 10,
-          },
-          [theme.breakpoints.up("md")]: {
-            width: 120,
-            fontSize: 10,
-          },
-          [theme.breakpoints.up("lg")]: {
-            width: 175,
-            fontSize: 11,
-          },
-          [theme.breakpoints.up("xl")]: {
-            width: 200,
-            fontSize: 12,
-          },
-          [theme.breakpoints.up("xxl")]: {
-            width: 270,
-            fontSize: 12,
-          },
-          [theme.breakpoints.up("xxxl")]: {
-            width: 320,
-            fontSize: 13,
-          },
+          width: "80%",
+          height: "80%",
+          objectFit: "cover",
         }}
       />
     </div>
