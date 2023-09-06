@@ -1,11 +1,9 @@
 import React from "react";
-import Button from "@mui/material/Button";
 import Languages from "../../components/languages";
 import { useNavigate } from "react-router-dom";
 import { Grid, Paper } from "@mui/material";
 import MyButton from "../../components/button";
 import img from "../../assets/images/background.png";
-// import useStyles from "./styles.homepage";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -64,15 +62,12 @@ const HomePage = () => {
                   marginTop: "auto",
                 }}
               >
-                Front-end Software Developer
+                Front-end <br />
+                Software Developer
               </h1>
             </Grid>
             <Grid id="slogan" item>
-              <p
-                style={{
-                  marginBottom: "20px",
-                }}
-              >
+              <p style={{ marginBottom: "20px" }}>
                 <i>Coding your ideas into reality!</i>
               </p>
 
@@ -84,17 +79,9 @@ const HomePage = () => {
                   margin: "auto",
                 }}
               >
-                <MyButton
-                  onClick={handleProjectsButton}
-                  name={"Projects"}
-                ></MyButton>
-
-                <MyButton
-                  onClick={handleAboutMeButton}
-                  name={"About Me"}
-                ></MyButton>
-
-                <MyButton name={"Contact"}></MyButton>
+                <MyButton onClick={handleProjectsButton} name={"Projects"} />
+                <MyButton onClick={handleAboutMeButton} name={"About Me"} />
+                <MyButton name={"Contact"} />
               </Grid>
               <Grid
                 container

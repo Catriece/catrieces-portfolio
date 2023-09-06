@@ -47,19 +47,19 @@ const MyButton = ({ name, onClick }) => {
           fontSize: 10,
         },
         [theme.breakpoints.up("lg")]: {
-          width: 175,
+          width: 155,
           fontSize: 11,
         },
         [theme.breakpoints.up("xl")]: {
-          width: 200,
+          width: 180,
           fontSize: 12,
         },
         [theme.breakpoints.up("xxl")]: {
-          width: 270,
+          width: 250,
           fontSize: 12,
         },
         [theme.breakpoints.up("xxxl")]: {
-          width: 320,
+          width: 300,
           fontSize: 13,
         },
       }}

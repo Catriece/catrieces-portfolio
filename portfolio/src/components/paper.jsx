@@ -1,16 +1,19 @@
 import React from "react";
 import { Paper } from "@mui/material";
 
-const MyPaper = ({ content }) => {
+const MyPaper = ({ content, img, maxheight }) => {
   return (
     <Paper
       elevation={10}
       sx={{
-        margin: 5,
-        paddingTop: 5,
-        paddingRight: 4,
-        paddingBottom: 5,
-        paddingLeft: 4,
+        backgroundImage: img,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        margin: "auto",
+        minHeight: "350px",
+        maxHeight: maxheight,
+        padding: 5,
         borderRadius: 4,
         boxShadow: "0px 4px 100px #ffde59",
         "@media (max-width: 600px)": {
