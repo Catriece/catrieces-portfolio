@@ -11,29 +11,11 @@ const MyPaper = ({ content, img, maxheight }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         margin: "auto",
-        minHeight: "350px",
+        width: "75%",
         maxHeight: maxheight,
         padding: 5,
-        borderRadius: 4,
-        boxShadow: "0px 4px 100px #ffde59",
-        "@media (max-width: 600px)": {
-          minWidth: "320px",
-          maxWidth: "500px",
-        },
-        "@media (min-width: 600px)": {
-          minWidth: "500px",
-          maxWidth: "750px",
-        },
-        "@media (min-width: 960px)": {
-          minWidth: "800px",
-          maxWidth: "1000px",
-        },
-        "@media (min-width: 1280px)": {
-          width: "1000px",
-        },
-        "@media (min-width: 1580px)": {
-          minWidth: "1300px",
-        },
+        borderRadius: 2,
+        boxShadow: "0px 4px 20px #ffde59",
       }}
     >
       {content}

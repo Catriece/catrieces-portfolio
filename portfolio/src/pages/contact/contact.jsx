@@ -1,18 +1,16 @@
-import React from "react";
-import MyPaper from "../../components/paper";
 import { Grid } from "@mui/material";
-import ProjectList from "../../assets/projects/project.list";
-import bg from "../../assets/images/shapesbg.png";
+import React from "react";
 import Header from "../../components/header";
+import ContactForm from "../../components/contact.form";
+import bg from "../../assets/images/shapesbg.png";
 
-const Projects = () => {
+export default function ContactMe() {
   return (
     <Grid
       container
-      spacing={2}
       sx={{
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
         minHeight: "100vh",
         backgroundImage: `url(${bg})`,
@@ -31,15 +29,19 @@ const Projects = () => {
             fontSize: "50px",
           }}
         >
-          Project Page
+          Contact Me!
         </h1>
-        <ProjectList />
+      </Grid>
+      <Grid
+        item
+        xs={7}
+        sx={{ marginTop: "40px", marginBottom: "20px", marginLeft: "30px" }}
+      >
+        <ContactForm />
       </Grid>
       <Grid item xs={12}>
         <p style={{ textAlign: "center", marginBottom: "10px" }}>catriece 🤪</p>
       </Grid>
     </Grid>
   );
-};
-
-export default Projects;
+}

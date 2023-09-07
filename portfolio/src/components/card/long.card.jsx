@@ -1,10 +1,10 @@
 import React from "react";
-import { Card } from "@mui/material";
+import { Grid, Card } from "@mui/material";
 import "./long.card.css";
 
 const LongCard = ({ date, name, img, description }) => {
   return (
-    <div style={{ margin: "auto" }}>
+    <Grid sx={{ margin: "auto" }}>
       <Card
         className="card"
         sx={{
@@ -12,11 +12,11 @@ const LongCard = ({ date, name, img, description }) => {
           justifyContent: "center",
           alignItems: "center",
           borderRadius: "15px",
-          border: ".5px black solid",
-          width: "90%",
-          marginTop: "20px",
+          width: "75%",
+          marginTop: "15px",
           marginRight: "auto",
           marginLeft: "auto",
+          fontFamily: "Bebas Nenu",
         }}
       >
         <div className="img">
@@ -37,7 +37,7 @@ const LongCard = ({ date, name, img, description }) => {
           </p>
         </div>
       </Card>
-    </div>
+    </Grid>
   );
 };
 

@@ -1,40 +1,28 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap");
+
+/* FORM FIELDS */
+.contact {
+  border-radius: 20px;
+  border: 0.5px black solid;
+  min-height: 40px;
+  min-width: 400px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.msg {
+  min-height: 250px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.label {
+  font-size: 17px;
+  margin: 8px;
+  font-weight: 500;
+  font-family: Source Code;
+  padding: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.field {
+  padding-left: 30px;
 }
 
 /* MEDIA QUERIES */

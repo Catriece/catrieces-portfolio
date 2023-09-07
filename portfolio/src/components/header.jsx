@@ -1,8 +1,9 @@
 import React from "react";
 import MyButton from "./button";
 import { useNavigate } from "react-router-dom";
+import { Grid } from "@mui/material";
 
-function Header({ title, style, buttons }) {
+export default function Header({ position }) {
   const navigate = useNavigate();
 
   const handleAboutMeButton = () => {
@@ -17,18 +18,46 @@ function Header({ title, style, buttons }) {
     navigate("/contactme");
   };
 
+  const handleProjectsButton = () => {
+    navigate("/projects");
+  };
+
   return (
     <>
-      <span style={style}>{title}</span>
-      <div style={buttons}>
-        <span>
-          <MyButton name={"Home"} onClick={handleHomeButton} />
-          <MyButton name={"About Me"} onClick={handleAboutMeButton} />
-          <MyButton name={"Contact"} onClick={handleContactButton} />
-        </span>
-      </div>
+      <Grid
+        container
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: { position },
+        }}
+      >
+        <MyButton
+          name={"Home"}
+          fontSize={"30px"}
+          fontFamily={"Bebas Neue"}
+          onClick={handleHomeButton}
+        />
+        <MyButton
+          name={"About Me"}
+          fontSize={"30px"}
+          fontFamily={"Bebas Neue"}
+          onClick={handleAboutMeButton}
+        />
+        <MyButton
+          name={"Projects"}
+          fontSize={"30px"}
+          fontFamily={"Bebas Neue"}
+          onClick={handleProjectsButton}
+        />
+        <MyButton
+          name={"Contact"}
+          fontSize={"30px"}
+          fontFamily={"Bebas Neue"}
+          onClick={handleContactButton}
+        />
+      </Grid>
     </>
   );
 }
-
-export default Header;
