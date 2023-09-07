@@ -5,6 +5,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import Container from "@mui/material/Container";
+import { Grid } from "@mui/material";
 
 export default function NavMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -30,43 +31,50 @@ export default function NavMenu() {
     navigate("/");
   };
 
+  const handleCloseContacts = () => {
+    setAnchorEl(null);
+    navigate("/contactme");
+  };
+
   return (
-    <Container
-      maxWidth="sm"
-      justifyContent="flex-start"
+    <Grid
+      container
+      spacing={2}
       sx={{
-        textAlign: "left",
-        margin: 0,
-        paddingTop: 0,
+        display: "flex",
+        justifyContent: "flex-end",
       }}
     >
-      <Button
-        id="basic-button"
-        aria-controls={open ? "basic-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        sx={{
-          justifyContent: "flex-start",
-          paddingLeft: "0",
-          color: "#000000",
-        }}
-        onClick={handleClick}
-      >
-        {<MenuRoundedIcon />}
-      </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleCloseHome}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
-        <MenuItem onClick={handleCloseHome}>Home</MenuItem>
-        <MenuItem onClick={handleCloseProjects}>Projects</MenuItem>
-        <MenuItem onClick={handleCloseAboutMe}>About Me</MenuItem>
-      </Menu>
-    </Container>
+      <Grid item xs={12} sx={{ display: { md: "none" } }}>
+        <Button
+          id="basic-button"
+          aria-controls={open ? "basic-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+          sx={{
+            justifyContent: "flex-start",
+            paddingLeft: "0",
+            color: "#000000",
+          }}
+          onClick={handleClick}
+        >
+          {<MenuRoundedIcon sx={{ size: "large" }} />}
+        </Button>
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleCloseHome}
+          MenuListProps={{
+            "aria-labelledby": "basic-button",
+          }}
+        >
+          <MenuItem onClick={handleCloseHome}>Home</MenuItem>
+          <MenuItem onClick={handleCloseAboutMe}>About Me</MenuItem>
+          <MenuItem onClick={handleCloseProjects}>My Projects</MenuItem>
+          <MenuItem onClick={handleCloseContacts}>Contact Me</MenuItem>
+        </Menu>
+      </Grid>
+    </Grid>
   );
 }

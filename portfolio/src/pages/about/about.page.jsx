@@ -1,9 +1,7 @@
 import React from "react";
-import Image from "../../components/image";
 import img from "../../assets/images/funphoto.png";
+import bg from "../../assets/images/shapesbg.png";
 import Header from "../../components/header";
-import { Card } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import { Grid } from "@mui/material";
 
 const AboutMe = () => {
@@ -11,12 +9,16 @@ const AboutMe = () => {
     <Grid
       container
       sx={{
+        display: "flex",
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
+        width: "100vw",
+        paddingRight: "60px",
+        paddingLeft: "60px",
       }}
     >
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ paddingBottom: "30px" }}>
         <Header />
       </Grid>
 
@@ -24,11 +26,23 @@ const AboutMe = () => {
         <img
           src={img}
           alt="catriece"
-          style={{ width: "90%", padding: "10px" }}
+          style={{
+            width: "90%",
+            padding: "10px",
+            height: "500px",
+            top: "200px",
+            left: "20px",
+            marginTop: "170px",
+          }}
         />
       </Grid>
 
-      <Grid item xs={12} md={7} sx={{ margin: "auto", paddingRight: "50px" }}>
+      <Grid
+        item
+        xs={12}
+        md={7}
+        sx={{ margin: "auto", paddingRight: "50px", marginTop: "130px" }}
+      >
         <h1
           style={{
             marginBottom: "0px",
@@ -43,7 +57,7 @@ const AboutMe = () => {
         </h1>
 
         <p
-          style={{ lineHeight: "1.35rem", textAlign: "center", padding: "7px" }}
+          style={{ lineHeight: "1.45rem", textAlign: "center", padding: "7px" }}
         >
           My name is Catriece, and I am a passionate web developer with quite a
           knack for turning lines of code into captivating online experiences.

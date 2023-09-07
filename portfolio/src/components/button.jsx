@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import { useTheme, createTheme } from "@mui/material/styles";
 
 const MyButton = ({ name, onClick, fontSize, fontFamily }) => {
   return (

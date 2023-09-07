@@ -1,7 +1,7 @@
 import React from "react";
 import MyButton from "./button";
 import { useNavigate } from "react-router-dom";
-import { Grid } from "@mui/material";
+import { Grid, display } from "@mui/material";
 
 export default function Header({ position }) {
   const navigate = useNavigate();
@@ -27,10 +27,11 @@ export default function Header({ position }) {
       <Grid
         container
         sx={{
-          display: "flex",
+          display: { xs: "none", md: "flex" },
           justifyContent: "center",
           alignItems: "center",
-          position: { position },
+          backgroundColor: "#ffffff",
+          position: "fixed",
         }}
       >
         <MyButton
