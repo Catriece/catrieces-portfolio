@@ -8,6 +8,14 @@ import memorygame from "../projectimages/memorygame.png";
 const ProjectList = ({ style }) => {
   const projects = [
     {
+      name: "Basic Tic-Tac-Toe: Animal Edition",
+      img: mfc,
+      date: "September 8th, 2023",
+      link: "https://tictactoe-ten-ruby.vercel.app/",
+      description:
+        "JavaScript, CSS, HTML - I created a basic JavaScript tic-tac-toe app. It's a battle with your favorite domestic animals! Cats vs Dog! With this app Player Dog and Player Cat battle it out to see who'll come out on top!",
+    },
+    {
       name: "Social Media Application",
       img: mfc,
       date: "July 2023-August 2023",

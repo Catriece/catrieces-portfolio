@@ -32,14 +32,14 @@ export default function DesktopView() {
           <p
             style={{
               textAlign: "right",
-              marginTop: 0,
+              marginTop: "30px",
               marginRight: "30px",
               marginBottom: 0,
               marginLeft: "30px",
               fontFamily: "Bebas Reue",
-              fontSize: "50px",
+              fontSize: "70px",
               fontWeight: "900",
-              lineHeight: "2.5rem",
+              lineHeight: "4rem",
             }}
           >
             Front-end <br /> Software Developer
@@ -47,8 +47,9 @@ export default function DesktopView() {
           <p
             style={{
               marginTop: 5,
+              marginLeft: "30px",
               fontFamily: "Source Code",
-              fontSize: "25px",
+              fontSize: "30px",
             }}
           >
             <i>coding your ideas into reality</i>
@@ -56,19 +57,20 @@ export default function DesktopView() {
           <h2
             style={{
               textAlign: "center",
-              fontFamily: "Bebas Nenu",
-              fontSize: "25px",
+              fontFamily: "Bebas Reue",
+              fontSize: "35px",
+              marginBottom: 3,
             }}
           >
             SKILLS
           </h2>
-          <Languages />
+          <Languages height={"65px"} width={"65px"} />
         </Grid>
         <Grid item md={5} sx={{ margin: "auto" }}>
           <img
             src={img}
             alt="memoji"
-            style={{ width: "80%", padding: "10px" }}
+            style={{ width: "80%", padding: "10px", marginTop: "85px" }}
           />
         </Grid>
       </Grid>
