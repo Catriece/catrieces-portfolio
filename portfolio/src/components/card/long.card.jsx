@@ -1,41 +1,27 @@
 import React from "react";
-import { Grid, Card } from "@mui/material";
-import "./long.card.css";
+import { Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
 
 const LongCard = ({ date, name, img, description }) => {
   return (
-    <Grid sx={{ margin: "auto" }}>
+    <Grid item>
       <Card
-        className="card"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: "15px",
-          width: "75%",
-          marginTop: "15px",
-          marginRight: "auto",
-          marginLeft: "auto",
-          fontFamily: "Bebas Nenu",
-        }}
+        elevation={8}
+        sx={{ textDecoration: "none", width: "300px", margin: "20px" }}
       >
-        <div className="img">
-          <img src={img} alt={name} style={{ height: "100%", width: "100%" }} />
-        </div>
-        <div className="textBox">
-          <div className="textContent">
-            <p
-              className="h1"
-              style={{ marginBottom: "3px", marginLeft: "10px" }}
-            >
-              {name}
-            </p>
-            <span className="span">{date}</span>
-          </div>
-          <p className="p" style={{ paddingBottom: "10px" }}>
+        <CardMedia component="img" height="200" image={img} alt={name} />
+        <CardContent sx={{ textAlign: "center" }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ textDecoration: "none" }}
+          >
+            {name}
+          </Typography>
+          <Typography variant="h9">{date}</Typography>
+          <Typography variant="body2" color="text.secondary">
             {description}
-          </p>
-        </div>
+          </Typography>
+        </CardContent>
       </Card>
     </Grid>
   );

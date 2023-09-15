@@ -9,7 +9,6 @@ export default function ContactForm() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "100vh",
         width: "100%",
       }}
     >
@@ -33,7 +32,7 @@ export default function ContactForm() {
         <input
           type="checkbox"
           name="botcheck"
-          class="hidden"
+          className="hidden"
           style={{ display: "none" }}
         />
 
@@ -80,7 +79,7 @@ export default function ContactForm() {
             style={{
               marginRight: "auto",
               marginLeft: "auto",
-              marginTop: "30px",
+              marginTop: "10px",
               width: "100%",
               display: "flex",
               flexDirection: "row",

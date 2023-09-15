@@ -1,25 +1,25 @@
 import React from "react";
 import MyButton from "./button";
 import { useNavigate } from "react-router-dom";
-import { Grid, display } from "@mui/material";
+import { Grid } from "@mui/material";
 
-export default function Header({ position }) {
+export default function Header({ about, projects, home, contact }) {
   const navigate = useNavigate();
 
   const handleAboutMeButton = () => {
-    navigate("/aboutme");
+    navigate(`/#${about}`);
   };
 
   const handleHomeButton = () => {
-    navigate("/");
+    navigate(`/#${home}`);
   };
 
   const handleContactButton = () => {
-    navigate("/contactme");
+    navigate(`/#${contact}`);
   };
 
   const handleProjectsButton = () => {
-    navigate("/projects");
+    navigate(`/#${projects}`);
   };
 
   return (

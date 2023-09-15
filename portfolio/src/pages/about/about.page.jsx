@@ -1,27 +1,22 @@
 import React from "react";
 import img from "../../assets/images/funphoto.png";
-import bg from "../../assets/images/shapesbg.png";
-import Header from "../../components/header";
 import { Grid } from "@mui/material";
 
-const AboutMe = () => {
+const AboutMe = (id) => {
   return (
     <Grid
+      id={id}
       container
       sx={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight: "100vh",
+        minHeight: "60vh",
         width: "100vw",
         paddingRight: "60px",
         paddingLeft: "60px",
       }}
     >
-      <Grid item xs={12} sx={{ paddingBottom: "30px" }}>
-        <Header />
-      </Grid>
-
       <Grid item xs={12} md={5} sx={{ margin: "auto" }}>
         <img
           src={img}
@@ -30,23 +25,16 @@ const AboutMe = () => {
             width: "90%",
             padding: "10px",
             height: "500px",
-            top: "200px",
             left: "20px",
-            marginTop: "170px",
           }}
         />
       </Grid>
 
-      <Grid
-        item
-        xs={12}
-        md={7}
-        sx={{ margin: "auto", paddingRight: "50px", marginTop: "130px" }}
-      >
+      <Grid item xs={12} md={7} sx={{ paddingRight: "50px" }}>
         <h1
           style={{
             marginBottom: "0px",
-            marginTop: "auto",
+            marginTop: "0px",
             textAlign: "center",
             fontFamily: "Bebas Neue",
             fontSize: "50px",
@@ -96,9 +84,6 @@ const AboutMe = () => {
           <br />
           Cheers to pixels, passion, and a limitless digital world!
         </p>
-      </Grid>
-      <Grid item xs={12}>
-        <p style={{ textAlign: "center", marginBottom: "10px" }}>catriece 🤪</p>
       </Grid>
     </Grid>
   );
