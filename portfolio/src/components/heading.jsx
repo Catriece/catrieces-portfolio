@@ -6,11 +6,13 @@ const Heading = ({ name }) => {
       style={{
         textAlign: "center",
         fontSize: "65px",
-        fontFamily: "Source Code",
+        fontFamily: "Bebas Neue",
         fontWeight: 900,
+        marginTop: "50px",
         marginRight: "auto",
+        marginBottom: 15,
         marginLeft: "auto",
-        marginBottom: 0,
+        letterSpacing: "10px",
       }}
     >
       {name}

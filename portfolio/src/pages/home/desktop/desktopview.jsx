@@ -3,7 +3,7 @@ import Header from "../../../components/header";
 import { Grid } from "@mui/material";
 import Heading from "../../../components/heading";
 import { handleScroll } from "./scroll.functions";
-import { containerStyling } from "./styling";
+import { containerStyling, formContainerStyling } from "./styling";
 import LandingPage from "../../landing/landingpage.desktop";
 import AboutMe from "../../about/about.page";
 import ContactMe from "../../contact/contact";
@@ -20,7 +20,7 @@ export default function DesktopView() {
       container
       sx={{
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
         minHeight: "100vh",
       }}
@@ -40,17 +40,20 @@ export default function DesktopView() {
         <Heading name={"About Me"} />
         <AboutMe id={"aboutme"} />
       </Grid>
-      <Heading name={"Projects"} />
       <Grid container ref={projects} sx={containerStyling}>
+        <Heading name={"Projects"} />
+
         <ProjectList id={"projects"} />
       </Grid>
-      <Heading name={"Contact Me"} />
-      <Grid container ref={contactMe} sx={containerStyling}>
+      <Grid container ref={contactMe} sx={formContainerStyling}>
+        <Heading name={"Contact Me"} />
         <ContactMe id={"contactme"} />
       </Grid>
 
       <Grid item xs={12}>
-        <p style={{ textAlign: "center", marginBottom: "10px" }}>catriece 🤪</p>
+        <p style={{ textAlign: "center", marginBottom: "10px" }}>
+          Catriece Gilbert ©
+        </p>
       </Grid>
     </Grid>
   );

@@ -11,7 +11,7 @@ const ProjectList = ({ id }) => {
   const projects = [
     {
       id: 4,
-      name: "Basic Tic-Tac-Toe: Animal Edition",
+      name: "Tic-Tac-Toe: Animal Edition",
       img: ttt,
       date: "September 8th, 2023",
       link: "https://tictactoe-ten-ruby.vercel.app/",
@@ -50,13 +50,22 @@ const ProjectList = ({ id }) => {
   return (
     <Grid
       container
-      id={id}
-      sx={{ justifyContent: "center", alignItems: "flex-start" }}
+      sx={{
+        paddingRight: 10,
+        paddingLeft: 10,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
       {projects.map((project) => {
         return (
           <>
-            <Link to={project.link} key={project.name}>
+            <Link
+              to={project.link}
+              key={project.name}
+              style={{ textDecoration: "none" }}
+            >
               <MyCard
                 link={project.link}
                 key={project.id}

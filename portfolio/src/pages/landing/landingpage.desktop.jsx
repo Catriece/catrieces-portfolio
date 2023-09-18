@@ -5,33 +5,36 @@ import Languages from "../../components/languages";
 
 const LandingPage = () => {
   return (
-    <Grid
-      container
-      sx={{
-        marginTop: "auto",
-        paddingTop: "20px",
-        display: { md: "flex", xs: "none" },
-      }}
-    >
-      <Grid item md={7} sx={{ paddingLeft: "40px", margin: "auto" }}>
+    <>
+      <Grid
+        item
+        md={7}
+        sx={{
+          paddingLeft: "40px",
+          margin: "auto",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
         <p
           style={{
             textAlign: "right",
-            marginTop: "30px",
             marginRight: "30px",
             marginBottom: 0,
             marginLeft: "30px",
-            fontFamily: "Bebas Reue",
+            fontFamily: "Bebas Neue",
             fontSize: "70px",
             fontWeight: "900",
             lineHeight: "4rem",
+            letterSpacing: "5px",
           }}
         >
           Front-end <br /> Software Developer
         </p>
         <p
           style={{
-            marginTop: 5,
+            marginTop: 3,
             marginLeft: "30px",
             fontFamily: "Source Code",
             fontSize: "30px",
@@ -42,9 +45,11 @@ const LandingPage = () => {
         <h2
           style={{
             textAlign: "center",
-            fontFamily: "Bebas Reue",
+            fontFamily: "Bebas Neue",
             fontSize: "35px",
+            letterSpacing: "3px",
             marginBottom: 3,
+            fontWeight: "400",
           }}
         >
           SKILLS
@@ -58,7 +63,7 @@ const LandingPage = () => {
           style={{ width: "80%", padding: "10px", marginTop: "85px" }}
         />
       </Grid>
-    </Grid>
+    </>
   );
 };
 

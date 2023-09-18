@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Paper } from "@mui/material";
 
-export default function ContactForm() {
+export default function ContactForm({ autofocus }) {
   return (
     <Grid
       container
@@ -37,7 +37,7 @@ export default function ContactForm() {
         />
 
         <Paper
-          elevation={5}
+          elevation={16}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -46,6 +46,8 @@ export default function ContactForm() {
             borderRadius: "15px",
             height: "300px",
             width: "100%",
+            boxShadow: 0,
+            backgroundColor: "#ffde59",
           }}
         >
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -55,6 +57,7 @@ export default function ContactForm() {
               name="email"
               className="contact field"
               placeholder="Enter your email."
+              autofocus={autofocus}
               required
             />
             <label className="label">Name:</label>
@@ -89,7 +92,11 @@ export default function ContactForm() {
             <textarea
               name="message"
               className="contact msg"
-              style={{ minHeight: "180px", overflow: "scroll" }}
+              style={{
+                minHeight: "180px",
+                overflow: "scroll",
+                padding: "10px",
+              }}
               required
             ></textarea>
             <br />

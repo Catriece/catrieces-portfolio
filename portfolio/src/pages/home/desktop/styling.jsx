@@ -1,5 +1,11 @@
 export const containerStyling = {
   marginTop: "auto",
-  paddingTop: "20px",
+  paddingTop: "60px",
+  display: { md: "flex", xs: "none" },
+};
+
+export const formContainerStyling = {
+  marginTop: "auto",
+  paddingTop: "30px",
   display: { md: "flex", xs: "none" },
 };
