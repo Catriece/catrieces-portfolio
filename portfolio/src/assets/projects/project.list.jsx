@@ -1,17 +1,18 @@
 import React from "react";
-import LongCard from "../../components/card/long.card";
+import MyCard from "../../components/card/myCard";
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
 import mfc from "../projectimages/mfc.png";
 import pokedex from "../projectimages/pokedex.png";
 import memorygame from "../projectimages/memorygame.png";
+import ttt from "../projectimages/ttt.png";
 
 const ProjectList = ({ id }) => {
   const projects = [
     {
       id: 4,
       name: "Basic Tic-Tac-Toe: Animal Edition",
-      img: mfc,
+      img: ttt,
       date: "September 8th, 2023",
       link: "https://tictactoe-ten-ruby.vercel.app/",
       description:
@@ -56,7 +57,7 @@ const ProjectList = ({ id }) => {
         return (
           <>
             <Link to={project.link} key={project.name}>
-              <LongCard
+              <MyCard
                 link={project.link}
                 key={project.id}
                 date={project.date}

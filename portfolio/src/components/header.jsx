@@ -1,27 +1,13 @@
 import React from "react";
 import MyButton from "./button";
-import { useNavigate } from "react-router-dom";
 import { Grid } from "@mui/material";
 
-export default function Header({ about, projects, home, contact }) {
-  const navigate = useNavigate();
-
-  const handleAboutMeButton = () => {
-    navigate(`/#${about}`);
-  };
-
-  const handleHomeButton = () => {
-    navigate(`/#${home}`);
-  };
-
-  const handleContactButton = () => {
-    navigate(`/#${contact}`);
-  };
-
-  const handleProjectsButton = () => {
-    navigate(`/#${projects}`);
-  };
-
+export default function Header({
+  functionHome,
+  functionAbout,
+  functionProject,
+  functionContact,
+}) {
   return (
     <>
       <Grid
@@ -38,25 +24,25 @@ export default function Header({ about, projects, home, contact }) {
           name={"Home"}
           fontSize={"30px"}
           fontFamily={"Bebas Neue"}
-          onClick={handleHomeButton}
+          onClick={functionHome}
         />
         <MyButton
           name={"About Me"}
           fontSize={"30px"}
           fontFamily={"Bebas Neue"}
-          onClick={handleAboutMeButton}
+          onClick={functionAbout}
         />
         <MyButton
           name={"Projects"}
           fontSize={"30px"}
           fontFamily={"Bebas Neue"}
-          onClick={handleProjectsButton}
+          onClick={functionProject}
         />
         <MyButton
           name={"Contact"}
           fontSize={"30px"}
           fontFamily={"Bebas Neue"}
-          onClick={handleContactButton}
+          onClick={functionContact}
         />
       </Grid>
     </>

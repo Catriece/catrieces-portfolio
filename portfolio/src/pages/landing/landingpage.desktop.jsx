@@ -3,7 +3,7 @@ import { Grid } from "@mui/material";
 import img from "../../assets/images/background.png";
 import Languages from "../../components/languages";
 
-const DesktopView = ({ marginBottom }) => {
+const LandingPage = () => {
   return (
     <Grid
       container
@@ -62,4 +62,4 @@ const DesktopView = ({ marginBottom }) => {
   );
 };
 
-export default DesktopView;
+export default LandingPage;

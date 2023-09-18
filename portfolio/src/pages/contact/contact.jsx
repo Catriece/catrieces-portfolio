@@ -10,10 +10,13 @@ export default function ContactMe({ id }) {
         display: "flex",
         justifyContent: "flex-start",
         alignItems: "center",
-        minHeight: "100vh",
       }}
     >
-      <Grid item xs={12} sx={{ marginBottom: "20px", marginLeft: "30px" }}>
+      <Grid
+        item
+        xs={12}
+        sx={{ marginTop: "20px", marginBottom: "20px", marginLeft: "30px" }}
+      >
         <ContactForm />
       </Grid>
     </Grid>

@@ -40,58 +40,64 @@ export default function ContactForm() {
           elevation={5}
           sx={{
             display: "flex",
-            flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
             padding: "20px",
             borderRadius: "15px",
-            minHeight: "400px",
+            height: "300px",
             width: "100%",
           }}
         >
-          <label className="label">Email:</label>
-          <input
-            type="email"
-            name="email"
-            className="contact field"
-            placeholder="Enter your email."
-            required
-          />
-          <label className="label">Name:</label>
-          <input
-            type="text"
-            name="First Name"
-            className="contact field"
-            placeholder="Enter your name."
-            required
-          />
-          <label className="label">Phone Number:</label>
-          <input
-            type="text"
-            name="Phone Number"
-            className="contact field"
-            placeholder="What's a good number to reach you at?"
-            required
-          />
-          <label className="label">Message:</label>
-          <textarea name="message" className="contact msg" required></textarea>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <label className="label">Email:</label>
+            <input
+              type="email"
+              name="email"
+              className="contact field"
+              placeholder="Enter your email."
+              required
+            />
+            <label className="label">Name:</label>
+            <input
+              type="text"
+              name="First Name"
+              className="contact field"
+              placeholder="Enter your name."
+              required
+            />
+            <label className="label">Phone Number:</label>
+            <input
+              type="text"
+              name="Phone Number"
+              className="contact field"
+              placeholder="What's a good number to reach you at?"
+              required
+            />
+          </div>
           <div
             style={{
               marginRight: "auto",
               marginLeft: "auto",
-              marginTop: "10px",
               width: "100%",
               display: "flex",
-              flexDirection: "row",
+              flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
+            <label className="label">Message:</label>
+            <textarea
+              name="message"
+              className="contact msg"
+              style={{ minHeight: "180px", overflow: "scroll" }}
+              required
+            ></textarea>
+            <br />
             <button
               type="submit"
               style={{
                 width: "75%",
-                height: "35px",
+                height: "30px",
                 borderRadius: "15px",
                 border: ".5px solid black",
               }}
