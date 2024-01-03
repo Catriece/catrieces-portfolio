@@ -58,7 +58,32 @@ const MobileView = () => {
       <h1 style={{ textAlign: "center" }}>
         SORRY TO MISS YOU! MY PORTFOLIO IS CURRENTLY UNDER CONSTRUCTION
       </h1>
-      <h2>If you could, come back tomorrow</h2>
+      <h2 style={{ textAlign: "center" }}> If you could, come back tomorrow</h2>
+      <p style={{ textAlign: "center", margin: 5 }}>
+        Head on over to my{" "}
+        <a href="https://www.linkedin.com/in/catriece-gilbert-971958236/">
+          LinkedIn
+        </a>{" "}
+        profile! I would love to connect!
+      </p>
+      <p style={{ textAlign: "center", margin: 0 }}>
+        Or take a look at my <a href="https://github.com/Catriece">Github </a>
+        account!
+      </p>
+      <p>Here are a couple projects you can take a look through:</p>
+      <ul>
+        <li>
+          <a href="https://main.d3cysl72cukyoo.amplifyapp.com/">
+            Pokémon Pokédex
+          </a>{" "}
+          - Using React
+        </li>
+        <li>
+          <a href="https://replit.com/@catriecegilbert/Choose-Your-Own-Adventure">
+            Create Your Own Adventure - Python
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
