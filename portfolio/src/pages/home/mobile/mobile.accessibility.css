@@ -1,0 +1,6 @@
+h1:focus,
+h2:focus,
+h3:focus {
+  /* Your focus styles */
+  outline: 2px solid blue; /* Example: Adding an outline */
+}

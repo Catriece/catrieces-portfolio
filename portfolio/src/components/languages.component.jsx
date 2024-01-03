@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@mui/material";
 
-const Languages = ({ height, width }) => {
+const LanguagesComponent = ({ height, width }) => {
   const skills = [
     {
       img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
@@ -32,7 +32,7 @@ const Languages = ({ height, width }) => {
   return (
     <Grid
       container
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
     >
       {skills.map((skill) => {
         return (
@@ -56,4 +56,4 @@ const Languages = ({ height, width }) => {
   );
 };
 
-export default Languages;
+export default LanguagesComponent;

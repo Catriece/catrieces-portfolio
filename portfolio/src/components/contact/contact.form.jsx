@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Paper } from "@mui/material";
+import "./contact.form.css";
 
 export default function ContactForm({ autofocus }) {
   return (
@@ -73,7 +74,7 @@ export default function ContactForm({ autofocus }) {
               type="text"
               name="Phone Number"
               className="contact field"
-              placeholder="What's a good number to reach you at?"
+              placeholder="A good phone number to reach you at."
               required
             />
           </div>
@@ -94,21 +95,12 @@ export default function ContactForm({ autofocus }) {
               className="contact msg"
               style={{
                 minHeight: "180px",
-                overflow: "scroll",
                 padding: "10px",
               }}
               required
             ></textarea>
             <br />
-            <button
-              type="submit"
-              style={{
-                width: "75%",
-                height: "30px",
-                borderRadius: "15px",
-                border: ".5px solid black",
-              }}
-            >
+            <button id="submit-btn" type="submit">
               Submit Form
             </button>
           </div>

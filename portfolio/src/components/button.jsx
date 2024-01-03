@@ -6,9 +6,7 @@ const MyButton = ({ name, onClick, fontSize, fontFamily }) => {
     <Button
       onClick={onClick}
       sx={{
-        marginTop: 5,
-        paddingRight: 3,
-        paddingLeft: 3,
+        marginTop: 2,
 
         fontSize: fontSize,
         fontFamily: fontFamily,

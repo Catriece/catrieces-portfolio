@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useState, useRef } from "react";
+import { handleScroll } from "../pages/home/desktop/scroll.functions";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import BottomNavigation from "@mui/material/BottomNavigation";
@@ -8,34 +9,24 @@ import PersonIcon from "@mui/icons-material/Person";
 import WorkIcon from "@mui/icons-material/Work";
 import EmailIcon from "@mui/icons-material/Email";
 import Paper from "@mui/material/Paper";
-import { useNavigate } from "react-router-dom";
 
 export default function FixedBottomNavigation({ onClick }) {
-  const [value, setValue] = React.useState(0);
-  const ref = React.useRef(null);
+  const [value, setValue] = useState(0);
+  const ref = useRef(null);
 
-  const navigate = useNavigate();
+  const home = useRef(null);
+  const aboutMe = useRef(null);
+  const projects = useRef(null);
+  const contactMe = useRef(null);
 
-  const handleAboutMeButton = () => {
-    navigate("/aboutme");
-  };
-
-  const handleHomeButton = () => {
-    navigate("/");
-  };
-
-  const handleContactButton = () => {
-    navigate("/contactme");
-  };
-
-  const handleProjectsButton = () => {
-    navigate("/projects");
-  };
+  const handleHome = () => handleScroll({ elementRef: home });
+  const handleAboutMe = () => handleScroll({ elementRef: aboutMe });
+  const handleProjects = () => handleScroll({ elementRef: projects });
+  const handleContactMe = () => handleScroll({ elementRef: contactMe });
 
   return (
     <Box sx={{ pb: 7 }} ref={ref}>
       <CssBaseline />
-
       <Paper
         sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
         elevation={3}
@@ -50,22 +41,22 @@ export default function FixedBottomNavigation({ onClick }) {
           <BottomNavigationAction
             label="Home"
             icon={<HomeIcon />}
-            onClick={handleHomeButton}
+            onClick={handleHome}
           />
           <BottomNavigationAction
             label="About Me"
             icon={<PersonIcon />}
-            onClick={handleAboutMeButton}
+            onClick={handleAboutMe}
           />
           <BottomNavigationAction
             label="Projects"
             icon={<WorkIcon />}
-            onClick={handleProjectsButton}
+            onClick={handleProjects}
           />
           <BottomNavigationAction
             label="Contact"
             icon={<EmailIcon />}
-            onClick={handleContactButton}
+            onClick={handleContactMe}
           />
         </BottomNavigation>
       </Paper>

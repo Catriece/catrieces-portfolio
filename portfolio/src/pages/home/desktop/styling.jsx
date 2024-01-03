@@ -1,7 +1,7 @@
 export const containerStyling = {
   marginTop: "auto",
   paddingTop: "60px",
-  display: { md: "flex", xs: "none" },
+  display: "flex",
 };
 
 export const formContainerStyling = {

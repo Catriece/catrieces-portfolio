@@ -1,0 +1,10 @@
+#submit-btn {
+  width: 75%;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid;
+  background-color: #dda2ed;
+}
+#submit-btn:hover {
+  background-color: bisque;
+}

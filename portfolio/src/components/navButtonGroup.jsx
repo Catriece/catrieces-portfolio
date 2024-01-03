@@ -2,47 +2,46 @@ import React from "react";
 import MyButton from "./button";
 import { Grid } from "@mui/material";
 
-export default function Header({
+const NavButtonGroup = ({
+  fontSize,
+  padding,
   functionHome,
   functionAbout,
   functionProject,
   functionContact,
-}) {
+}) => {
   return (
-    <Grid
-      container
-      sx={{
-        display: { xs: "none", md: "flex" },
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#ffffff",
-        position: "fixed",
-      }}
-    >
+    <>
       <MyButton
+        sx={{ padding: padding }}
         name={"Home"}
-        fontSize={"30px"}
+        fontSize={fontSize}
         fontFamily={"Bebas Neue"}
         onClick={functionHome}
       />
       <MyButton
+        sx={{ padding: padding }}
         name={"About Me"}
-        fontSize={"30px"}
+        fontSize={fontSize}
         fontFamily={"Bebas Neue"}
         onClick={functionAbout}
       />
       <MyButton
+        sx={{ padding: padding }}
         name={"Projects"}
-        fontSize={"30px"}
+        fontSize={fontSize}
         fontFamily={"Bebas Neue"}
         onClick={functionProject}
       />
       <MyButton
+        sx={{ padding: padding }}
         name={"Contact"}
-        fontSize={"30px"}
+        fontSize={fontSize}
         fontFamily={"Bebas Neue"}
         onClick={functionContact}
       />
-    </Grid>
+    </>
   );
-}
+};
+
+export default NavButtonGroup;
