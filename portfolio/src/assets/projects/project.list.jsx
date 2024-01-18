@@ -24,8 +24,8 @@ const ProjectList = ({ id }) => {
       img: mfc,
       date: "July 2023-August 2023",
       link: "https://drive.google.com/drive/u/0/folders/1ZdT18WWIukUsOo6lQ0QpgqQiV4MYt7B5",
-      description:
-        "MERN - I created a database using MySQL and a full stack mobile application using Express.js, React and Node.js. With this social media application, the user is able to create and form their own circle of friends and tailor a social media experience centered only around the people they have connected with and no one else.",
+      techstack: "React, Expressjs, Nodejs, MySQl",
+      description: "A fun and group-centered social media application.",
     },
     {
       id: 2,
@@ -48,37 +48,50 @@ const ProjectList = ({ id }) => {
   ];
 
   return (
-    <Grid
-      container
-      sx={{
-        paddingRight: 10,
-        paddingLeft: 10,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      {projects.map((project) => {
-        return (
-          <>
-            <Link
-              to={project.link}
-              key={project.name}
-              style={{ textDecoration: "none" }}
-            >
-              <MyCard
-                link={project.link}
-                key={project.id}
-                date={project.date}
-                name={project.name}
-                img={project.img}
-                description={project.description}
-              />
-            </Link>
-          </>
-        );
-      })}
-    </Grid>
+    <>
+      <h3>{projects[1].name}</h3>
+      <a href={projects[1].link}>
+        <img src={projects[1].img} alt="Social Media Application" />
+      </a>
+      <p id="project-description">
+        <b>
+          <em>{projects[1].techstack}</em>
+        </b>
+        <br />
+        {projects[1].description}
+      </p>
+
+      {/* <div id="carousel">
+        {projects.map((project) => {
+          if (id !== 1) {
+            return (
+              <>
+                <Link
+                  to={project.link}
+                  key={project.name}
+                  style={{ textDecoration: "none" }}
+                >
+                  <div id="project-card-div" key={project.id}>
+                    <a id="project-link" href={project.link}>
+                      <img
+                        id="project-image"
+                        src={project.img}
+                        alt={project.name}
+                      />
+                    </a>
+                    <div id="project-content">
+                      <p id="project-name">{project.name}</p>
+                      <p id="project-date">{project.date}</p>
+                      <p id="project-description">{project.description}</p>
+                    </div>
+                  </div>
+                </Link>
+              </>
+            );
+          }
+        })}
+      </div> */}
+    </>
   );
 };
 

@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora&family=Quattrocento&family=Quattrocento+Sans&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
@@ -6,9 +8,191 @@
 
 body {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0, auto;
+  background-image: url("./assets/images/background.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+main {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px;
-  margin: 0, auto;
+}
+
+.navigation-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+}
+
+.navigation-links {
+  text-decoration: none;
+  font-family: Oswald;
+  color: rgb(0, 0, 0);
+  margin-left: 20px;
+}
+
+img {
+  max-height: 200px;
+  margin-top: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+#logo {
+  width: 175px;
+  height: 200px;
+  box-sizing: border-box;
+  border: 5px white solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+/* @media screen and (max-width: 376px) { */
+#home-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  height: 100vh;
+  max-width: 350px;
+  overflow: hidden;
+}
+
+#logo-div {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Oswald";
+  text-align: center;
+  margin: 10px 0px 20px 0px;
+  letter-spacing: 0.235rem;
+  margin-bottom: 0px;
+}
+
+h2 {
+  margin: 0px auto 25px;
+  font-weight: 400;
+  font-size: 1.235rem;
+  line-height: 0.5rem;
+}
+
+#button-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  padding: 20px 0px;
+}
+
+button {
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 16px 16px 32px #d9d9d9, -16px -16px 32px #ffffff;
+  border: 0.5px solid rgb(255, 255, 255);
+  margin: 5px 5px 12px;
+  width: 80%;
+  height: 40px;
+  max-width: 300px;
+}
+
+button:hover {
+  border-radius: 50px;
+  background: #fff7ad;
+  box-shadow: 20px 20px 60px #d9d293, -20px -20px 60px #ffffc7;
+}
+
+#footer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+/* End of Home Page CSS */
+
+/* Start of Projects Page CSS */
+
+#project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
+  max-height: 90vh;
+  overflow: scroll;
+  margin: 30px auto;
+}
+
+.project-headings {
+  text-align: center;
+  font-family: Oswald;
+  font-size: 2rem;
+}
+
+#project-card-div {
+  width: 90%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+}
+
+#project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#project-name,
+#project-date,
+#project-description {
+  margin: 5px 15px;
+  font-size: 15px;
+  font-weight: 200;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#carousel {
+  display: flex;
+  flex-direction: row;
+}
+/* End of Projects Page CSS */
+
+/* } */
+
+/* @media screen and (min-width: 1000px) {
+  button {
+    height: 40px;
+  }
+} */
+
+@media screen and (min-width: 200px) {
+  @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 }
